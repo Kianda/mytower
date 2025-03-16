@@ -17,7 +17,7 @@ jobs:
         run: docker pull containrrr/watchtower:latest
 
       - name: Retag with custom name
-        run: docker tag containrrr/watchtower:latest ${{ secrets.DOCKER_USERNAME }}/mytower:latest
+        run: docker tag containrrr/watchtower:latest ${{ secrets.DOCKERHUB_USERNAME }}/mytower:latest
 
       - name: Push to Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/mytower:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/mytower:latest
