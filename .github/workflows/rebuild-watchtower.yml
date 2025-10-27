@@ -2,7 +2,8 @@ name: Rebuild and Push Watchtower
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # Weekly build
+    #- cron: '0 0 * * 0' # Weekly build
+    - cron: '0 0 1 * *' # Monthly build
   workflow_dispatch:
 
 jobs:
